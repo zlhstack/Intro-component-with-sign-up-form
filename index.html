@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Image -->
+    <img
+      src="images/bg-intro-desktop.png"
+      alt="background-image"
+      class="background-image"
+    />
+
+    <!-- Main Container -->
+    <div class="main-container">
+      <!-- Sub Container Left -->
+      <div class="sub-container-left">
+        <!-- Header -->
+        <h1>Learn to code by watching others</h1>
+
+        <!-- Paragraph -->
+        <p class="paragraph">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+
+      <!-- Sub Container Right -->
+      <div class="sub-container-right">
+        <!-- 7days Trial -->
+        <a href="#free7day" class="free7day"
+          >Try it free 7 days
+          <span class="small-font-weight">then $20/mo.thereafter</span></a
+        >
+
+        <!-- Form Container -->
+        <div class="form-container">
+          <!-- First Name -->
+          <div class="fname-container">
+            <input type="text" placeholder="First Name" class="input" />
+            <img
+              src="images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+              id="errorIconFname"
+            />
+            <p class="error-content" id="errorContentFname"></p>
+          </div>
+          <!-- Last Name -->
+          <div class="lname-container">
+            <input type="text" placeholder="Last Name" class="input" />
+            <img
+              src="images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+              id="errorIconLname"
+            />
+            <p class="error-content" id="errorContentLname"></p>
+          </div>
+          <!-- Email -->
+          <div class="email-container">
+            <input type="email" placeholder="Email" class="input" />
+            <img
+              src="images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+              id="errorIconEmail"
+            />
+            <p class="error-content" id="errorContentEmail"></p>
+          </div>
+          <!-- Password -->
+          <div class="password-container">
+            <input
+              type="password"
+              placeholder="Password"
+              class="input"
+              id="password"
+            />
+            <div class="password-eyeIcon-errorIcon">
+              <img src="images/eye-open.svg" alt="eye" class="eye" />
+              <img
+                src="images/icon-error.svg"
+                alt="error"
+                class="password-error-icon"
+                id="errorIconPassword"
+              />
+            </div>
+            <p class="error-content" id="errorContentPassword"></p>
+          </div>
+          <!-- Button -->
+          <button class="button">CLAIM YOUR FREE TRIAL</button>
+
+          <!-- Terms and Services -->
+          <p class="footer-text">
+            By clicking the button, you are agreeing to our
+            <a href="#TermsAndServices" class="terms-and-services-link"
+              >Terms and Services</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
+  </body>
+</html>
