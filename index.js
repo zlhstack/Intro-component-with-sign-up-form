@@ -26,10 +26,15 @@ button.addEventListener("click", () => {
     // Checking Input
     // First Name Checking
     if (inputPlaceholder === "First Name") {
-      if (inputValue === "") {
+      if (!/[a-z\d]/gi.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentFname.textContent = "First Name cannot be empty";
+        errorIconFname.style.display = "block";
+      } else if (/[\d]/g.test(inputValue)) {
+        input.style.border = "2px solid red";
+        input.style.boxShadow = "0 3px red";
+        errorContentFname.textContent = "First Name cannot contain numbers";
         errorIconFname.style.display = "block";
       } else {
         input.style.border = "1px solid hsl(246, 25%, 77%)";
@@ -41,10 +46,15 @@ button.addEventListener("click", () => {
 
     // Last Name Checking
     if (inputPlaceholder === "Last Name") {
-      if (inputValue === "") {
+      if (!/[a-z\d]/gi.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentLname.textContent = "Last Name cannot be empty";
+        errorIconLname.style.display = "block";
+      } else if (/[\d]/g.test(inputValue)) {
+        input.style.border = "2px solid red";
+        input.style.boxShadow = "0 3px red";
+        errorContentLname.textContent = "Last Name cannot contain numbers";
         errorIconLname.style.display = "block";
       } else {
         input.style.border = "1px solid hsl(246, 25%, 77%)";
@@ -56,12 +66,15 @@ button.addEventListener("click", () => {
 
     // Email Checking
     if (inputPlaceholder === "Email") {
-      if (inputValue === "") {
+      if (!/[a-z\d]/gi.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentEmail.textContent = "Email cannot be empty";
         errorIconEmail.style.display = "block";
-      } else if (!inputValue.endsWith("@gmail.com") && inputValue !== "") {
+      } else if (
+        !/@gmail.com$/.test(inputValue) &&
+        /[a-z\d]/.test(inputValue)
+      ) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentEmail.textContent = "Looks like this is not an email";
@@ -76,22 +89,19 @@ button.addEventListener("click", () => {
 
     // Password Checking
     if (inputPlaceholder === "Password") {
-      if (inputValue === "") {
+      if (!/[a-z\d]/gi.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentPassword.textContent = "Password cannot be empty";
         errorIconPassword.style.display = "block";
         passwordEyeIconErrorIcon.style.transform = "translate(0, -80%)";
-      } else if (inputValue !== "" && inputValue.length < 4) {
+      } else if (!/[a-z\d]{4,}/gi.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentPassword.textContent = "Password must at least 4";
         errorIconPassword.style.display = "block";
         passwordEyeIconErrorIcon.style.transform = "translate(0, -80%)";
-      } else if (
-        (inputValue !== "" && !/[a-zA-Z]/.test(inputValue)) ||
-        !/\d/.test(inputValue)
-      ) {
+      } else if (!/[a-z]/gi.test(inputValue) || !/\d/.test(inputValue)) {
         input.style.border = "2px solid red";
         input.style.boxShadow = "0 3px red";
         errorContentPassword.textContent =
