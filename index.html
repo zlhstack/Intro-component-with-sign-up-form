@@ -58,7 +58,12 @@
         <div class="form-container">
           <!-- First Name -->
           <div class="fname-container">
-            <input type="text" placeholder="First Name" class="input" />
+            <input
+              type="text"
+              placeholder="First Name"
+              class="input"
+              id="fname"
+            />
             <img
               src="images/icon-error.svg"
               alt="error"
@@ -69,7 +74,12 @@
           </div>
           <!-- Last Name -->
           <div class="lname-container">
-            <input type="text" placeholder="Last Name" class="input" />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="input"
+              id="lname"
+            />
             <img
               src="images/icon-error.svg"
               alt="error"
@@ -80,7 +90,7 @@
           </div>
           <!-- Email -->
           <div class="email-container">
-            <input type="email" placeholder="Email" class="input" />
+            <input type="email" placeholder="Email" class="input" id="email" />
             <img
               src="images/icon-error.svg"
               alt="error"
@@ -90,15 +100,21 @@
             <p class="error-content" id="errorContentEmail"></p>
           </div>
           <!-- Password -->
-          <div class="password-container">
+          <form class="password-container">
             <input
               type="password"
               placeholder="Password"
               class="input"
               id="password"
+              autocomplete="new-password"
             />
             <div class="password-eyeIcon-errorIcon">
-              <img src="images/eye-open.svg" alt="eye" class="eye" />
+              <img
+                src="images/eye-open.svg"
+                alt="eye"
+                class="eye"
+                data-state="open"
+              />
               <img
                 src="images/icon-error.svg"
                 alt="error"
@@ -107,7 +123,7 @@
               />
             </div>
             <p class="error-content" id="errorContentPassword"></p>
-          </div>
+          </form>
           <!-- Button -->
           <button class="button">CLAIM YOUR FREE TRIAL</button>
 
